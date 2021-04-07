@@ -37,8 +37,7 @@ def create_plot(var):
     p2.legend.click_policy="hide"
     return p2
 plot_list=[]
-for var in "tau225,pwv[mm],lwp[kg*m^-2],iwp[kg*m^-2]".split(","):
-      plot_list.append(create_plot(var))
+plot_list=[create_plot(var) for var in"tau225,pwv[mm],lwp[kg*m^-2],iwp[kg*m^-2]".split(",") ]
       
 p = Column(*plot_list)
 
