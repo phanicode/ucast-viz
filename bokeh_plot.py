@@ -40,7 +40,7 @@ plot_list=[]
 for var in "tau225,pwv[mm],lwp[kg*m^-2],iwp[kg*m^-2]".split(","):
       plot_list.append(create_plot(var))
       
-p = Column(plot_list[0],plot_list[1],plot_list[2],plot_list[3])
+p = Column(*plot_list)
 
 
 show(p)
