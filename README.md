@@ -1,6 +1,8 @@
-# ucast-viz
- Visualizing ucast through bokeh
+Usage: bokeh_plot.py [OPTIONS]
 
-Eg : python bokeh_plot.py latest
+Options:
+  --repopath TEXT  path of directory containing data.      
+                   Defaults to current directory
 
-# plots all stations with label toggle. Needs to be pasted in ucast-db repo.
+  --version TEXT   version of dataset. Eg : latest,        
+                   latest-06...
