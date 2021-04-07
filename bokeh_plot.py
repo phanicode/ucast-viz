@@ -22,7 +22,7 @@ set_dates(dfs)
 output_file("forecast.html")
 
 def create_plot(var):
-    p2 = figure(title = var,plot_width=1600, plot_height=500, x_axis_type="datetime")
+    p2 = figure(title = var,plot_width=1600, plot_height=500, x_axis_type="datetime",tools="pan,box_zoom,box_select,lasso_select,undo,wheel_zoom,redo,reset,save".split())
     if var=="tau225":
         p2.y_range = Range1d(0, 1)
     elif var=="pwv[mm]":
@@ -37,7 +37,7 @@ def create_plot(var):
     p2.legend.click_policy="hide"
     return p2
 plot_list=[create_plot(var) for var in"tau225,pwv[mm],lwp[kg*m^-2],iwp[kg*m^-2]".split(",") ]
-      
+
 p = Column(*plot_list)
 
 
